@@ -3,13 +3,14 @@ from scrapy.xlib.pydispatch import dispatcher
 from scrapy.http import Request
 from voa.utils import get_redis
  
-class CustomSpiderMiddleware(object):
+class DduplicateMiddleware(object):
     redis = None
     lock = True
     info = {}
     def __init__(self):
         dispatcher.connect(self.open,signals.engine_started)
         dispatcher.connect(self.close,signals.engine_stopped)
+
     def process_spider_output(self,response, result, spider):
         if self.lock is True:
             self.info = spider
