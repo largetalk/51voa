@@ -37,4 +37,6 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (
 COOKIES_ENABLED = True
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-MP3_STORE_DIR = os.path.join(PROJECT_DIR, 'MP3_STORE')
+
+SPE_MP3_STORE_DIR = os.path.join(PROJECT_DIR, 'SPE_MP3')
+STE_MP3_STORE_DIR = os.path.join(PROJECT_DIR, 'STE_MP3')

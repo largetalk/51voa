@@ -11,7 +11,7 @@ from voa.utils import split_title_day
 from voa.utils import strip_tags
 from voa.utils import _f
 from voa.utils import wget_download_mp3
-from voa.settings import MP3_STORE_DIR
+from voa.settings import SPE_MP3_STORE_DIR
 
 class SpecialEnglishSpider(CrawlSpider):
     name = 'special'
@@ -59,7 +59,7 @@ class SpecialEnglishSpider(CrawlSpider):
         return i
 
     def download_mp3(self, mp3_url):
-        base_dir = MP3_STORE_DIR
+        base_dir = SPE_MP3_STORE_DIR
         old_mp3_url = mp3_url
         mp3_url = mp3_url.lstrip('http://')
         if not mp3_url.find('/'):
