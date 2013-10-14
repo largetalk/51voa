@@ -12,3 +12,10 @@ class VoaSpecialItem(Item):
     page_url = Field()
     mp3_url = Field()
     article = Field()
+
+class VoaStandardItem(Item):
+    title = Field()
+    day = Field()
+    page_url = Field()
+    mp3_url = Field()
+    article = Field()

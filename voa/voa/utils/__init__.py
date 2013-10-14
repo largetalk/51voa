@@ -62,3 +62,10 @@ def wget_download_mp3(url, fdir, name):
     returnCode = subprocess.call(command, shell=True)
     return returnCode
 
+def extract_page_id(url):
+    reg = re.compile('VOA_Standard_(\d+)')
+    rf = reg.findall(url)
+    if rf:
+        return rf[0]
+    else:
+        return 0
